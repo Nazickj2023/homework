@@ -28,11 +28,12 @@ class HorizontalScroll(ctk.CTkScrollableFrame):
         data_api = read_json(name_file= 'config_api.json')
         API_KEY = data_api['api_key']
         CITY_NAME = data_api['city_name']
-        URL = f"https://api.openweathermap.org/data/2.5/forecast?q={CITY_NAME}&appid={API_KEY}&units=metric&lang=uk&cnt=3"
+        CNT = data_api['cnt']
         #
-        
         try:
-            response = requests.get(URL)
+            # "https://api.openweathermap.org/data/2.5/forecast?q={}&appid={}&units=metric&lang=uk&cnt=3".format(CITY_NAME, API_KEY)
+            response = requests.get(url = data_api['config_forecast'].format(CITY_NAME, API_KEY, CNT))
+            #
             if response.status_code == 200:
                 # data_dict = json.loads(response.content)
                 data_dict = response.json()

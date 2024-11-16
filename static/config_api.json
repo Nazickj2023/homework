@@ -1,4 +1,7 @@
 {
     "api_key": "f45b384d06f8d6558d2f50d57cd3220f",
-    "city_name": "Dnipro"
+    "city_name": "Dnipro",
+    "config_weather": "https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units=metric&lang=uk",
+    "config_forecast": "https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&units=metric&lang=uk&cnt={2}",
+    "cnt": 40
 }
