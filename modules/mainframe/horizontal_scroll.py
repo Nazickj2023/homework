@@ -27,7 +27,7 @@ class HorizontalScroll(ctk.CTkScrollableFrame):
         #
         data_api = read_json(name_file= 'config_api.json')
         API_KEY = data_api['api_key']
-        CITY_NAME = data_api['city_name']
+        CITY_NAME = data_api['city_name'][0]
         CNT = data_api['cnt']
         #
         try:

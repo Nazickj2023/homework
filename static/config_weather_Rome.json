@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": -85.1647,
+        "lat": 34.257
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "хмарно",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 17.66,
+        "feels_like": 17.96,
+        "temp_min": 16.96,
+        "temp_max": 18.54,
+        "pressure": 1009,
+        "humidity": 95,
+        "sea_level": 1009,
+        "grnd_level": 983
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 170
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1732043785,
+    "sys": {
+        "type": 2,
+        "id": 2038061,
+        "country": "US",
+        "sunrise": 1732018688,
+        "sunset": 1732055673
+    },
+    "timezone": -18000,
+    "id": 4219762,
+    "name": "Rome",
+    "cod": 200
+}

@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": 14.4208,
+        "lat": 50.088
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "уривчасті хмари",
+            "icon": "03n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 11.13,
+        "feels_like": 10.13,
+        "temp_min": 9.96,
+        "temp_max": 11.78,
+        "pressure": 992,
+        "humidity": 70,
+        "sea_level": 992,
+        "grnd_level": 958
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 9.77,
+        "deg": 200
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1732043760,
+    "sys": {
+        "type": 2,
+        "id": 2010430,
+        "country": "CZ",
+        "sunrise": 1731997342,
+        "sunset": 1732029210
+    },
+    "timezone": 3600,
+    "id": 3067696,
+    "name": "Prague",
+    "cod": 200
+}
