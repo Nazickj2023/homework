@@ -7,36 +7,36 @@
         {
             "id": 802,
             "main": "Clouds",
-            "description": "—É—Ä–∏–≤—á–∞—Å—Ç—ñ —Ö–º–∞—Ä–∏",
-            "icon": "03n"
+            "description": "ÛË‚˜‡ÒÚ≥ ıÏ‡Ë",
+            "icon": "03d"
         }
     ],
     "base": "stations",
     "main": {
-        "temp": 11.13,
-        "feels_like": 10.13,
-        "temp_min": 9.96,
-        "temp_max": 11.78,
-        "pressure": 992,
-        "humidity": 70,
-        "sea_level": 992,
-        "grnd_level": 958
+        "temp": 4.41,
+        "feels_like": -0.83,
+        "temp_min": 3.27,
+        "temp_max": 5.54,
+        "pressure": 1024,
+        "humidity": 67,
+        "sea_level": 1024,
+        "grnd_level": 988
     },
     "visibility": 10000,
     "wind": {
-        "speed": 9.77,
-        "deg": 200
+        "speed": 8.75,
+        "deg": 240
     },
     "clouds": {
         "all": 40
     },
-    "dt": 1732043760,
+    "dt": 1732367228,
     "sys": {
         "type": 2,
         "id": 2010430,
         "country": "CZ",
-        "sunrise": 1731997342,
-        "sunset": 1732029210
+        "sunrise": 1732343315,
+        "sunset": 1732374564
     },
     "timezone": 3600,
     "id": 3067696,

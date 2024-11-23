@@ -2,8 +2,9 @@ import customtkinter
 from ..read_json import read_json
 from .frame_manager import scrollable_frame
 from ..request_api import requests_api
-import time
-import datetime
+from datetime import datetime, timedelta, timezone
+import json
+
 
 # dict_label = read_json(name_file="config_weather.json")
 
@@ -31,6 +32,7 @@ class CityFrame(customtkinter.CTkFrame):
         self.COUNT = count
         
         self.LIST_CITY = read_json(name_file= "config_api.json")['city_name']
+        self.LIST_CITY_UK = read_json(name_file= "config_api.json")['city_name_uk']
         self.position_map()
         
         self.dict_label = read_json(name_file= f"config_weather_{self.LIST_CITY[self.COUNT]}.json")
@@ -40,6 +42,8 @@ class CityFrame(customtkinter.CTkFrame):
         self.MAX_TEMP = f"макс.: {int(self.dict_label['main']['temp_max'])}°"
         self.MIN_TEMP = f"мін.: {int(self.dict_label['main']['temp_min'])}°"
         self.WEATHER_DESCRIPTION = self.dict_label['weather'][0]['description'].capitalize()
+        
+
         # 
         self.CURRENT_POSITION = customtkinter.CTkLabel(
             master= self,
@@ -59,7 +63,7 @@ class CityFrame(customtkinter.CTkFrame):
         #
         self.CITY_NAME = customtkinter.CTkLabel(
             master = self,
-            text = self.CITY_NAME,
+            text = self.time_city(),
             font = ("Roboto Slab", 12, "bold"),
             text_color = "#FFFFFF" 
         )
@@ -95,9 +99,11 @@ class CityFrame(customtkinter.CTkFrame):
         else:
             return f'{self.LIST_CITY[self.COUNT]}'
     def time_city(self):
-        time_city = time.gmtime(self.dict_label['dt'])
-        # time_city = datetime.datetime.fromtimestamp(self.dict_label['dt'])
-        print(time_city)
+        self.timezone_offset = self.dict_label['timezone']
+        self.local_time = datetime.now(timezone.utc) + timedelta(seconds= self.timezone_offset)
+        self.formatted_time = self.local_time.strftime("%H:%M")
+        return self.formatted_time
+        
         
         
 
